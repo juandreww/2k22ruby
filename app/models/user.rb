@@ -1,3 +1,2 @@
-class User < ApplicationController
-    has_secure_password
+class User < ApplicationRecord
 end
