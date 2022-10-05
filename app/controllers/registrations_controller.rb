@@ -4,9 +4,13 @@ class RegistrationsController < ApplicationController
     end
 
     def create
-        params
+        @user = User.new(user_params)
+    end
 
-        params[:user]
+    private
+
+    def user_params
+        params.require(:user).permit(:email, :password, :password_confirmation)
     end
 end
     
