@@ -4,7 +4,9 @@ class RegistrationsController < ApplicationController
     end
 
     def create
-        render plain: "thank you for signing up"
+        params
+
+        params[:user]
     end
 end
     
