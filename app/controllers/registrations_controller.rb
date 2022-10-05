@@ -7,7 +7,7 @@ class RegistrationsController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             cookies[:user_id]
-            redirect_to root_path, notice: "Successfully create new User"
+            redirect_to root_path, notice: "Successfully created new User"
         else
             render :new, status: :unprocessable_entity
         end
