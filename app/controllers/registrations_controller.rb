@@ -8,7 +8,7 @@ class RegistrationsController < ApplicationController
         if @user.save
             redirect_to root_path, notice: "Successfully create new User"
         else
-            format.html { render :new }
+            render :new, status: :unprocessable_entity
         end
     end
 
