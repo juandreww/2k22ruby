@@ -8,7 +8,7 @@ class RegistrationsController < ApplicationController
         if @user.save
             redirect_to root_path, notice: "Successfully create new User"
         else
-            render :new
+            format.html { render :new }
         end
     end
 
