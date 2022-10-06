@@ -1,13 +1,9 @@
-<% if @user %>
-    <div class="alert alert-dark mt-4" role="alert">
-        Logged in as: <%= @user.email %>
-    </div>
-<% end %>
+
 
 <div class = "d-flex align-items-center justify-content-center">
     <h1>Welcome</h1>
 </div>
 
-<% if @user %>
+<% if Current.user %>
     <%= button_to "Logout", logout_path, method: :delete%>
 <% end %>
