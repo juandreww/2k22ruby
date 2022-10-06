@@ -24,10 +24,10 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= button_to "Sign Up", sign_up_path, class:"nav-link" %>
+            <%= button_to "Sign Up", sign_up_path, method: :get, class:"nav-link" %>
           </li>
           <li class="nav-item">
-            <%= button_to "Login", sign_in_path, class:"nav-link" %>
+            <%= button_to "Login", sign_in_path, method: :get, class:"nav-link" %>
           </li>
         <% end %>
       </ul>
