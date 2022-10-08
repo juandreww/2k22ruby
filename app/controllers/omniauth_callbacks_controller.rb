@@ -1,5 +1,5 @@
 class OmniauthCallbacksController < ApplicationController
     def twitter
-        render plain: "Success!"
+        render :index
     end
 end
