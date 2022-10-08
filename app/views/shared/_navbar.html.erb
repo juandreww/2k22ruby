@@ -16,18 +16,18 @@
 
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <% if Current.user %>
-          <li class="nav-item">
+          <li class="nav-item mr-2">
             <span><%= link_to Current.user.email, edit_password_path, class: "nav-link" %></span>
           </li>
           <li class="nav-item">
-            <%= button_to "Logout", logout_path, method: :delete, class:"nav-link" %>
+            <%= button_to "Logout", logout_path, method: :delete, class:"nav-link btn btn-light" %>
           </li>
         <% else %>
-          <li class="nav-item">
-            <%= button_to "Sign Up", sign_up_path, method: :get, class:"nav-link" %>
+          <li class="nav-item mr-2">
+            <%= button_to "Sign Up", sign_up_path, method: :get, class:"nav-link btn btn-light" %>
           </li>
           <li class="nav-item">
-            <%= button_to "Login", sign_in_path, method: :get, class:"nav-link" %>
+            <%= button_to "Login", sign_in_path, method: :get, class:"nav-link btn btn-dark" %>
           </li>
         <% end %>
       </ul>
