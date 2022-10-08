@@ -19,12 +19,12 @@
 
     <div class="mb-3">
         <%= form.label :password %>
-        <%= form.password_field :password, class: "form-control", placeholder: "password" id="password" %>
+        <%= form.password_field :password, class: "form-control", placeholder: "password", id:"password" %>
     </div>
     
     <div class="mb-3">
         <%= form.label :password_confirmation %>
-        <%= form.password_field :password_confirmation, class: "form-control", placeholder: "password" id="password" %>
+        <%= form.password_field :password_confirmation, class: "form-control", placeholder: "password", id:"password_confirmation" %>
     </div>
     <div class="mb-3">
         <input type="checkbox" onclick="showPwd()">Show Password
@@ -35,3 +35,17 @@
     
 <% end %>
 <div class = "spacer-10"></div>
+
+<script type="text/javascript">
+    function showPwd() {
+        var x = document.getElementById("password");
+        var y = document.getElementById("password_confirmation");
+        if (x.type == "password") {
+            x.type = "text";
+            y.type = "text";
+        } else {
+            x.type = "password"
+            y.type = "password";
+        }
+    }
+</script>
