@@ -12,11 +12,34 @@
     <%= javascript_importmap_tags %>
     <style>
       body {
-        font-family: Verdana, sans-serif;
+        font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; 
+        background-image: url(<%= asset_path 'bg-landscape-n1.jpg' %>);
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .container {
+        background-color: #ffffff;
       }
 
       .about-us-body {
-        background-color: #f5f7fa;
+        /* background-color: #f5f7fa; */
+      }
+
+      .au-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      .au-table table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      p {
+        text-align: justify;
+        text-justify: inter-word;
       }
     </style>
   </head>
