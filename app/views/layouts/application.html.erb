@@ -11,17 +11,18 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <style>
-      html, body {
+      /* html, body {
         height: 100%;
-      }
-      
+      } */
+
       body {
         font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; 
         background-image: url(<%= asset_path 'bg-landscape-n1.jpg' %>);
         height: 100%;
-        /* background-position: center; */
+        background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: left top;
       }
 
       .container {
