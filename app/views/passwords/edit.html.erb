@@ -1,4 +1,6 @@
-<h1>Edit Password</h1>
+<div class="mt-3 pt-3">
+    <h1>Edit Password.</h1>
+</div>
 
 <%= form_with model: Current.user, url: edit_password_path do |form| %>
     <% if form.object.errors.any? %>
@@ -24,3 +26,4 @@
     </div>
     
 <% end %>
+<div class = "spacer-10"></div>
