@@ -9,7 +9,10 @@ class SessionsController < ApplicationController
             redirect_to root_path, notice: "Logged in successfully"
         else
             # puts YAML::dump(user)
-            if user.present?
+            if user.present? && user.fails >= 3
+                flash[:alert] = "Please try again in 30 minutes."
+                render :new, status: :unprocessable_entity
+            elsif user.present?
                 user.fails = user.fails + 1
                 user.save
             end
