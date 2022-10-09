@@ -11,6 +11,10 @@ class SessionsController < ApplicationController
             # puts YAML::dump(user)
             if user.present? && user.fails >= 3
                 flash[:alert] = "Please try again in 30 minutes."
+                if user.fails == nil
+                    user.failsuntil = Time.current
+                    user.save
+                end
             elsif user.present?
                 user.fails = user.fails + 1
                 user.save
