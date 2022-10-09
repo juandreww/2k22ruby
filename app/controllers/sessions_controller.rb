@@ -9,6 +9,10 @@ class SessionsController < ApplicationController
             redirect_to root_path, notice: "Logged in successfully"
         else
             # puts YAML::dump(user)
+            if user.present?
+                user.fails = user.fails + 1
+                user.save
+            end
             flash[:alert] = "Invalid email or password"
             render :new, status: :unprocessable_entity
         end
