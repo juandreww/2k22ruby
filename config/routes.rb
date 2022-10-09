@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get "about-us", to: "about#index", as: :about
+  get "terms", to: "terms#index"
+  get "privacy", to: "privacy#index"
 
   get "password", to: "passwords#edit", as: :edit_password
   patch "password", to: "passwords#update"
