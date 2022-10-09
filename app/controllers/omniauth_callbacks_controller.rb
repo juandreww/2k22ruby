@@ -1,6 +1,6 @@
 class OmniauthCallbacksController < ApplicationController
     def twitter
-        Rails.logger.info auth
+        Rails.logger.info Current.user.twitter_account
 
         Current.user.twitter_account.create(
             name: auth.info.name,
@@ -13,7 +13,7 @@ class OmniauthCallbacksController < ApplicationController
     end
 
     def auth
-        
+
         request.env['omniauth.auth']
     end
 end
