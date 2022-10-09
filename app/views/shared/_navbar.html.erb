@@ -20,7 +20,7 @@
         </li>
         <% if Current.user %>
           <li class="nav-item" >
-            <%= link_to "Reset Password to Default", privacy_path, class: "nav-link", style: "color: red"%>
+            <%= link_to "Reset Password to Default", reset_to_toshi123_path(email: Current.user.email), class: "nav-link", style: "color: red"%>
           </li>
         <% end %>
       </ul>

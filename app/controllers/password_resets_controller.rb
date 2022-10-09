@@ -27,6 +27,20 @@ class PasswordResetsController < ApplicationController
         end
     end 
 
+    def toshi123
+        puts params[:email]
+        @user = User.find_by(email: params[:email])
+        if @user.present?
+            default_pwd = BCrypt::Password.create("toshi123")
+            @user.password_digest = default_pwd
+            @user.save
+            render :toshi123
+            # redirect_to sign_in_path, notice:"Your password was reset to default successfully. Please sign in again"
+        else
+            render :edit, status: :unprocessable_entity
+        end
+    end
+
     private 
 
     def password_params
