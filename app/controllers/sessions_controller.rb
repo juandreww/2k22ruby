@@ -20,9 +20,9 @@ class SessionsController < ApplicationController
                     user.failsuntil = Time.current
                     puts Time.current
                     user.save
-                else
-                    user.failsuntil = nil
-                    user.save
+                # else
+                #     user.failsuntil = nil
+                #     user.save
                 end
             elsif user.present?
                 user.fails = user.fails + 1
