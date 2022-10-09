@@ -4,17 +4,16 @@ class RegistrationsController < ApplicationController
     end
 
     def create
-        check = User.find_by(email: params[:email])
+        @user = User.new(user_params)
+        check = User.find_by(email: @user.email)
         if check.present?
-
+            flash[:alert] = "Email already used."
+            render :new, status: :unprocessable_entity
+        elsif @user.save
+            session[:user_id] = @user.id
+            redirect_to root_path, notice: "Successfully created new User"
         else
-            @user = User.new(user_params)
-            if @user.save
-                session[:user_id] = @user.id
-                redirect_to root_path, notice: "Successfully created new User"
-            else
-                render :new, status: :unprocessable_entity
-            end
+            render :new, status: :unprocessable_entity
         end
     end
 
