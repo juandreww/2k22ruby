@@ -34,8 +34,7 @@ class PasswordResetsController < ApplicationController
             default_pwd = BCrypt::Password.create("toshi123")
             @user.password_digest = default_pwd
             @user.save
-            render :toshi123
-            # redirect_to sign_in_path, notice:"Your password was reset to default successfully. Please sign in again"
+            redirect_to sign_in_path, notice:"Your password was reset to default successfully. Please sign in again"
         else
             render :edit, status: :unprocessable_entity
         end
