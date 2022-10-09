@@ -11,12 +11,14 @@ class SessionsController < ApplicationController
             # puts YAML::dump(user)
             if user.present? && user.fails >= 3
                 flash[:alert] = "Please try again in 30 minutes."
-                render :new, status: :unprocessable_entity
             elsif user.present?
                 user.fails = user.fails + 1
                 user.save
+                flash[:alert] = "Invalid email or password"
+            else
+                flash[:alert] = "Invalid email or password"
             end
-            flash[:alert] = "Invalid email or password"
+            
             render :new, status: :unprocessable_entity
         end
     end
