@@ -14,18 +14,17 @@ class SessionsController < ApplicationController
                 user.save
                 flash[:alert] = "Please try again in 30 minutes."
                 if user.failsuntil.nil?
-                    puts "AKU DI A"
                     user.failsuntil = Time.current
                     puts Time.current
                     user.save
                 else
                     now = Time.current
-                    if now - user.failsuntil > 60
-                        puts "LEBIH DARI 60 DETIK"
-                        puts now
-                        puts user.failsuntil
+                    # Apabila lebih dari 30 menit
+                    if now - user.failsuntil > 1800
+                        user.failsuntil = nil
+                        flash[:alert] = "Invalid email or password"
                     end
-                    puts YAML::dump(now - user.failsuntil)
+
                     # user.failsuntil = nil
                     user.save
                 end
