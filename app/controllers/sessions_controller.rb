@@ -13,9 +13,6 @@ class SessionsController < ApplicationController
                 user.fails = user.fails + 1
                 user.save
                 flash[:alert] = "Please try again in 30 minutes."
-
-                puts "YOUR FRIEND IS HERE"
-                puts YAML::dump(user.failsuntil.nil?)
                 if user.failsuntil.nil?
                     user.failsuntil = Time.current
                     puts Time.current
