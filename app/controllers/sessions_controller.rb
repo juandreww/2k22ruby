@@ -15,7 +15,6 @@ class SessionsController < ApplicationController
                 flash[:alert] = "Please try again in 30 minutes."
                 if user.failsuntil.nil?
                     user.failsuntil = Time.current
-                    puts Time.current
                     user.save
                 else
                     now = Time.current
