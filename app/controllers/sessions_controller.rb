@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
             session[:user_id] = user.id
             if !user.failsuntil.nil?
                 # Apabila lebih dari 30 menit
+                now = Time.current
                 if now - user.failsuntil <= 1800
                     flash[:alert] = "Please try again in 30 minutes."
                     render :new, status: :unprocessable_entity
