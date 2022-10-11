@@ -3,7 +3,9 @@ class OmniauthCallbacksController < ApplicationController
         puts "HOLLYYYYYYYYYY PAPA MAMA GILSSSSSSSSSSS"
         Rails.logger.info auth
 
-        Current.user.twitter_accounts.create(
+        twitter_account = Current.user.twitter_accounts.where(username: auth.info.nicname).first_or_initialize
+
+        twitter_account.update(
             name: auth.info.name,
             username: auth.info.nickname,
             image: auth.info.image,
