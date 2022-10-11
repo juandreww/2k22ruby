@@ -12,7 +12,8 @@ class OmniauthCallbacksController < ApplicationController
             token: auth.credentials.token,
             secret: auth.credentials.secret,
         )
-        render :index
+        
+        redirect_to twitter_accounts_path, notice: "Successfully connected to your account"
     end
 
     def auth
