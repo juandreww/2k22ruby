@@ -10,4 +10,6 @@
         <%= button_to "Connect to Twitter", "/auth/twitter", data: {turbo: "false"}, method: :post, class: "btn btn-primary" %>
     <% end %>
 
+    <%= render @tweets %>
+
 <div class = "spacer-10"></div>
