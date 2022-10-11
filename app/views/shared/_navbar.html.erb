@@ -21,6 +21,9 @@
         <li class="nav-item">
           <%= link_to "Twitter", twitter_accounts_path, class: "nav-link"%>
         </li>
+        <li class="nav-item">
+          <%= link_to "Tweets", _path, class: "nav-link"%>
+        </li>
         <% if Current.user %>
           <li class="nav-item" >
             <%= link_to "Reset Password to Default", reset_to_toshi123_path(email: Current.user.email), class: "nav-link", style: "color: red"%>
