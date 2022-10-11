@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_09_144458) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_11_143244) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +24,20 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_09_144458) do
   create_table "pricing", id: { type: :string, limit: 38 }, force: :cascade do |t|
     t.string "title", limit: 255, default: "Default"
     t.decimal "price", precision: 19, scale: 4, default: "0.0"
+  end
+
+  create_table "tweets", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "twitter_account"
+    t.string "belongs_to"
+    t.string "body"
+    t.string "text"
+    t.datetime "publish_at"
+    t.string "tweet_id"
+    t.string "string"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_tweets_on_user_id"
   end
 
   create_table "twitter_accounts", force: :cascade do |t|
@@ -47,5 +61,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_09_144458) do
     t.datetime "failsuntil", precision: nil
   end
 
+  add_foreign_key "tweets", "users"
   add_foreign_key "twitter_accounts", "users"
 end
