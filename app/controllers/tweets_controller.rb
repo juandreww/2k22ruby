@@ -21,6 +21,6 @@ class TweetsController < ApplicationController
     private
 
     def tweet_params
-        params.require(:tweet).permit(:twitter_account_id, :body, :publish_at)
+        params.require(:tweet).permit(:twitter_account, :body, :publish_at)
     end
 end
