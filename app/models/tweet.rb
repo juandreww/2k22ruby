@@ -14,8 +14,6 @@ class Tweet < ApplicationRecord
   end
 
   def publish_to_twitter!
-    puts "Aaakakkaakak"
-    puts YAML::dump(twitter_account.client)
     tweet = twitter_account.client.update(body)
     update(tweet_id: tweet.id)
   end
