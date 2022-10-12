@@ -18,8 +18,9 @@ class SessionsController < ApplicationController
                     user.save
                     redirect_to root_path, notice: "Logged in successfully"
                 end
-                
             else 
+                user.fails = 0
+                user.save
                 redirect_to root_path, notice: "Logged in successfully"
             end
         else
