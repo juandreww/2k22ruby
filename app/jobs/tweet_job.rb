@@ -8,5 +8,4 @@ class TweetJob < ApplicationJob
     return if tweet.publish_at > Time.current
     tweet.publish_to_twitter!
   end
-  
 end
