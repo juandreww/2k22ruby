@@ -6,18 +6,17 @@ class PostsController < ApplicationController
     end
 
     def create
-        @user = User.find_by(email: params[:email])
-
-        if @user.present?
-            PasswordMailer.with(user: @user).reset.deliver_now
+        @post = Post.new(post_params)
+        if @post.save
+            redirect_to @post, notice: "Post was created successfully"
+        else
+            render :new, status: :unprocessable_entity
         end
-
-        redirect_to root_path, notice: "We are sending the link to your email to reset the password"
     end
 
     private 
 
-    def password_params
-        params.require(:user).permit(:password, :password_confirmation)
+    def post_params
+        params.require(:post).permit(:title, :caption)
     end
 end
