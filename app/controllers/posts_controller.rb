@@ -1,8 +1,4 @@
-class PostController < ApplicationController
-    def new
+class PostsController < ApplicationController
+    def index
     end
-
-    def create
-    end
-
 end
