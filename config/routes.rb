@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   get 'post', to: "posts#index"
+  get 'post/new', to: "posts#new"
+  post 'post/new', to: "posts#create"
 
   get "about-us", to: "about#index", as: :about
   get "terms", to: "terms#index"

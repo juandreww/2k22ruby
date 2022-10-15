@@ -1,0 +1,20 @@
+<div class="mt-3 pt-3">
+    <h1>Add new post</h1>
+</div>
+
+<%= form_with url: post_new_path do |form| %>
+    <div class="mb-3">
+        <%= form.label :title %>
+        <%= form.text_field :title, class: "form-control", placeholder: "Excited to shop in DQ Coffee.." %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :caption %>
+        <%= form.text_field :caption, class: "form-control", placeholder: "It sells Teh Obeng and spicy Ayam Penyet, crunchy af!" %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.submit "Create Post", class: "btn btn-primary" %>
+    </div>
+<% end %>
+<div class = "spacer-10"></div>
