@@ -3,6 +3,10 @@ class PostsController < ApplicationController
         @post = Current.post
     end
 
+    def show
+        @post = Post.find(params[:id])
+    end
+
     def new
         @post = Post.new
     end
@@ -10,7 +14,7 @@ class PostsController < ApplicationController
     def create
         @post = Post.new(post_params)
         if @post.save
-            redirect_to @post, notice: "Post was created successfully"
+            redirect_to :show, notice: "Post was created successfully"
         else
             render :new, status: :unprocessable_entity
         end

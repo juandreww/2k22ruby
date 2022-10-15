@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'post', to: "posts#index"
+  get 'post/', to: "posts#show", as: :show
   get 'post/new', to: "posts#new"
   post 'post/new', to: "posts#create"
 
