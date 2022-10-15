@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'post/', to: "posts#show", as: :show
   get 'post/new', to: "posts#new"
   post 'post/new', to: "posts#create"
+  # resources :posts
 
   get "about-us", to: "about#index", as: :about
   get "terms", to: "terms#index"

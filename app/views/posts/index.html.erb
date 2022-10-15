@@ -1,17 +1,5 @@
 <h1>Hello World!</h1>
 
-<% if !@post.nil? %>
-    <% if @post.errors.any? %>
-        <div class="alert alert-danger">
-            <% @post.errors.full_messages.each do |message| %>
-                <div><%= message %></div>
-            <% end %>
-        </div>
-    <% else %>
-        
-    <% end %>
-<% end %>
-
 <br><br><%= link_to "Create Post", "/post/new", class: "btn btn-primary" %>
 
 <div class = "spacer-10"></div>

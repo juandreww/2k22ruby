@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
     def index
-        @post = Current.post
     end
 
     def show
@@ -14,7 +13,8 @@ class PostsController < ApplicationController
     def create
         @post = Post.new(post_params)
         if @post.save
-            redirect_to :show, notice: "Post was created successfully"
+            puts @post.id
+            redirect_to @post, id: @post.id, notice: "Post was created successfully  #{@post.title} #{@post.caption}"
         else
             render :new, status: :unprocessable_entity
         end
