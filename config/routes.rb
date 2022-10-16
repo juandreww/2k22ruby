@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   post 'post/new', to: "posts#create"
   # resources :posts
 
+  get 'status', to: "status#index"
+
   get "about-us", to: "about#index", as: :about
   get "terms", to: "terms#index"
   get "privacy", to: "privacy#index"
