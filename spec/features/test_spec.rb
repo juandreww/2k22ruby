@@ -1,11 +1,21 @@
 require 'spec_helper'
 
-RSpec.describe 'Testing RSpec' do
-    it 'works' do
-        expect(10).to eql(10)
+class Console
+    def initialize(name, manufacturer)
+        @name = name
+        @manufacturer = manufacturer
     end
 
-    it 'will test fail?' do
-        expect(true).to be(true)
+    def formatted_name
+        "#{@manufacturer} #{$name}"
+    end
+end
+
+RSpec.describe Console do
+    subject { described_class.new('Switch', 'Nintendo') }
+    describe '#formatted_name' do
+        it 'returns the manufacturer and the console name together' do
+            expect(subject.formatted_name).to eql('Nintendo Switch')
+        end
     end
 end
