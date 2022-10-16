@@ -3,7 +3,7 @@ class ConsolesController < ApplicationController
         consoles = [
             { name: 'NES', manufacturer: 'Nintendo' },
             { name: 'SNES', manufacturer: 'Nintendo' },
-            { name: 'WIi', manufacturer: 'Nintendo' },
+            { name: 'Wii', manufacturer: 'Nintendo' },
             { name: 'Genesis', manufacturer: 'Sega' },
             { name: 'Xbox', manufacturer: 'Microsoft' },
             { name: 'Switch', manufacturer: 'Nintendo' },
@@ -11,6 +11,12 @@ class ConsolesController < ApplicationController
             { name: 'PS2', manufacturer: 'Sony' },
         ]
 
-        render(json: { 'consoles' => consoles })
+        if params[:manufacturer].present?
+            consoles = consoles.select do |console|
+                console[:manufacturer] == params[:manufacturer]
+            end
+        end
+
+        render(json: { 'consoles' => consoles.map { |console| console[:name] } })
     end
 end
