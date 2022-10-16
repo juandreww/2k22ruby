@@ -7,11 +7,11 @@ class Console
     end
 
     def formatted_name
-        "#{@manufacturer} #{$name}"
+        "#{@manufacturer} #{@name}"
     end
 end
 
-RSpec.describe Console do
+RSpec.describe Console, :focus do
     subject { described_class.new('Switch', 'Nintendo') }
     describe '#formatted_name' do
         it 'returns the manufacturer and the console name together' do
