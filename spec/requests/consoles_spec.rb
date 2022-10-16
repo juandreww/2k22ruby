@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Consoles requests' do
     describe 'GET /consoles' do
-        let(:json) { JSON.parse(response.body) }
+        # let(:json) { JSON.parse(response.body) }
         it 'returns an array of video games consoles' do
             get('/consoles')
             # expect(json['consoles']).to contain_exactly(
@@ -16,7 +16,7 @@ RSpec.describe 'Consoles requests' do
             #     'PS2'
             # )
 
-            expect(json['consoles']).to include(
+            expect(response_json['consoles']).to include(
                 'NES',
                 'SNES',
             )
@@ -24,7 +24,7 @@ RSpec.describe 'Consoles requests' do
 
         it 'supports specifying consoles for a specific manufacturer' do
             get('/consoles', params: { manufacturer: 'Nintendo' })
-            expect(json['consoles']).to contain_exactly(
+            expect(response_json['consoles']).to contain_exactly(
                 'NES',
                 'SNES',
                 'Wii',
