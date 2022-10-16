@@ -1,25 +1,25 @@
 require 'rails_helper'
 
-RSpec.describe 'Consoles requests' do
+RSpec.describe 'Consoles requests', :focus do
     describe 'GET /consoles' do
         # let(:json) { JSON.parse(response.body) }
         it 'returns an array of video games consoles' do
             get('/consoles')
-            # expect(json['consoles']).to contain_exactly(
-            #     'NES',
-            #     'SNES',
-            #     'Wii',
-            #     'Genesis',
-            #     'Xbox',
-            #     'Switch',
-            #     'PS1',
-            #     'PS2'
-            # )
-
-            expect(response_json['consoles']).to include(
+            expect(response_json['consoles']).to contain_exactly(
                 'NES',
                 'SNES',
+                'Wii',
+                'Genesis',
+                'Xbox',
+                'Switch',
+                'PS1',
+                'PS2'
             )
+
+            # expect(response_json['consoles']).to include(
+            #     'NES',
+            #     'SNES',
+            # )
         end
 
         it 'supports specifying consoles for a specific manufacturer' do
