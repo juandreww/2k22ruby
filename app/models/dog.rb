@@ -7,6 +7,10 @@ class Dog
         "Woof!"
     end
 
+    def feed
+        @hunger_level = 0
+    end
+
     def hungryyyyy?
         false
     end
