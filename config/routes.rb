@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # resources :posts
 
   get 'status', to: "status#index"
+  get 'consoles', to: "consoles#index"
 
   get "about-us", to: "about#index", as: :about
   get "terms", to: "terms#index"
