@@ -41,5 +41,5 @@ RSpec.describe Dog do
 
 end
 
-describe DogController do
+RSpec.describe DogController do
 end
