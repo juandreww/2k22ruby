@@ -26,4 +26,12 @@ RSpec.describe Console do
             expect(subject.formatted_name).to eql('Nintendo Wii')
         end
     end
+
+    describe '.nintendo' do
+        it 'returns an ActiveRecord::Relation of consoles manufactured by Nintendo' do
+            wii = described_class.create(manufacturer: 'Nintendo', name: 'Wii')
+            switch = described_class.create(manufacturer: 'Nintendo', name: 'Switch')
+            ps4 = described_class.create(manufacturer: 'Sony', name: 'PS4')
+        end
+    end
 end
