@@ -32,8 +32,6 @@ RSpec.describe Console do
             wii = described_class.create(manufacturer: 'Nintendo', name: 'Wii')
             switch = described_class.create(manufacturer: 'Nintendo', name: 'Switch')
             # ps4 = described_class.create(manufacturer: 'Sony', name: 'PS4')
-            puts wii
-            YAML::dump("Youtubezzz")
 
             expect(described_class.nintendo).to contain_exactly(
                 wii,
