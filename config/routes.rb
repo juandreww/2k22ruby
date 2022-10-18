@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   post 'post/new', to: "posts#create"
   # resources :posts
 
+  namespace :api do
+    get('status' => 'status#index')
+  end
+
   get 'status', to: "status#index"
   get 'consoles', to: "consoles#index"
   get 'home', to: "home#index"
