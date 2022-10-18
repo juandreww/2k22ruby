@@ -12,7 +12,7 @@ RSpec.describe 'Consoles requests' do
         Console.create(name: 'PS2', manufacturer: 'Sony')
     end
 
-    describe 'GET /consoles' do
+    describe 'GET /api/consoles' do
         # let(:json) { JSON.parse(response.body) }
         it 'returns an array of video games consoles' do
             get('/consoles')
