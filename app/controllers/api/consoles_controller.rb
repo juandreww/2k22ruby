@@ -1,4 +1,4 @@
-class ConsolesController < ApplicationController
+class Api::ConsolesController < ApplicationController
     def index
         # consoles = [
         #     { name: 'NES', manufacturer: 'Nintendo' },

@@ -15,7 +15,7 @@ RSpec.describe 'Consoles requests' do
     describe 'GET /api/consoles' do
         # let(:json) { JSON.parse(response.body) }
         it 'returns an array of video games consoles' do
-            get('/consoles')
+            get('/api/consoles')
             expect(response_json['consoles']).to contain_exactly(
                 'Nintendo NES',
                 'Nintendo SNES',
