@@ -6,6 +6,6 @@ RSpec.describe 'Home features' do
         expect(page).to have_content('Game Tracker')
         click_link('AboutGame')
         expect(current_path).to eql('/aboutgame')
-        expect(page).to have_content('<h1>AboutGame</h1>')
+        expect(page).to have_content('AboutGame')
     end
 end
