@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Consoles requests', :focus do
+RSpec.describe 'Consoles requests' do
     describe 'GET /consoles' do
         # let(:json) { JSON.parse(response.body) }
         it 'returns an array of video games consoles' do
