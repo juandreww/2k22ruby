@@ -10,13 +10,13 @@ class ConsolesController < ApplicationController
         #     { name: 'PS1', manufacturer: 'Sony' },
         #     { name: 'PS2', manufacturer: 'Sony' },
         # ]
-        consoles = Console.all
+        
         if params[:manufacturer].present?
-            consoles = consoles.select do |console|
-                console[:manufacturer] == params[:manufacturer]
-            end
+            consoles = Console.where(manufacturer: params[:manufacturer])
+        else 
+            consoles = Console.all
         end
 
-        render(json: { 'consoles' => consoles.map { |console| console[:name] } })
+        render(json: { 'consoles' => consoles.map(&:formatted_name) })
     end
 end

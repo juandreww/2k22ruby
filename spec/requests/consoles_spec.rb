@@ -17,14 +17,14 @@ RSpec.describe 'Consoles requests' do
         it 'returns an array of video games consoles' do
             get('/consoles')
             expect(response_json['consoles']).to contain_exactly(
-                'NES',
-                'SNES',
-                'Wii',
-                'Genesis',
-                'Xbox',
-                'Switch',
-                'PS1',
-                'PS2'
+                'Nintendo NES',
+                'Nintendo SNES',
+                'Nintendo Wii',
+                'Sega Genesis',
+                'Microsoft Xbox',
+                'Nintendo Switch',
+                'Sony PS1',
+                'Sony PS2'
             )
 
             # expect(response_json['consoles']).to include(
@@ -36,10 +36,10 @@ RSpec.describe 'Consoles requests' do
         it 'supports specifying consoles for a specific manufacturer' do
             get('/consoles', params: { manufacturer: 'Nintendo' })
             expect(response_json['consoles']).to contain_exactly(
-                'NES',
-                'SNES',
-                'Wii',
-                'Switch'
+                'Nintendo NES',
+                'Nintendo SNES',
+                'Nintendo Wii',
+                'Nintendo Switch'
             )
 
             # get('/consoles', params: { manufacturer: 'Sega' })
