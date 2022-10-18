@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     get('status' => 'status#index')
+    get('consoles' => 'consoles#index')
   end
 
   get 'status', to: "status#index"
