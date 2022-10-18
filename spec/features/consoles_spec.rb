@@ -14,5 +14,6 @@ RSpec.describe 'Consoles features' do
             # 3. expect something to happen
             expect(page).to have_content('Nintendo Switch')
             expect(page).to have_content('Nintendo Wii')
+        end
     end
 end
