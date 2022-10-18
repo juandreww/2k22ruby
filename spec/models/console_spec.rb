@@ -21,23 +21,24 @@ RSpec.describe Console do
         end
     end
 
-    # describe '#formatted_name' do
-    #     it 'returns the manufacturer and name in a string' do
-    #         expect(subject.formatted_name).to eql('Nintendo Wii')
-    #     end
-    # end
+    describe '#formatted_name' do
+        it 'returns the manufacturer and name in a string' do
+            expect(subject.formatted_name).to eql('Nintendo Wii')
+        end
+    end
 
-    # describe '.nintendo' do
-    #     it 'returns an ActiveRecord::Relation of consoles manufactured by Nintendo' do
-    #         wii = described_class.create(manufacturer: 'Nintendo', name: 'Wii')
-    #         switch = described_class.create(manufacturer: 'Nintendo', name: 'Switch')
-    #         # ps4 = described_class.create(manufacturer: 'Sony', name: 'PS4')
-    #         puts wii
+    describe '.nintendo' do
+        it 'returns an ActiveRecord::Relation of consoles manufactured by Nintendo' do
+            wii = described_class.create(manufacturer: 'Nintendo', name: 'Wii')
+            switch = described_class.create(manufacturer: 'Nintendo', name: 'Switch')
+            # ps4 = described_class.create(manufacturer: 'Sony', name: 'PS4')
+            puts wii
+            YAML::dump("Youtubezzz")
 
-    #         expect(described_class.nintendo).to contain_exactly(
-    #             wii,
-    #             switch
-    #         )
-    #     end
-    # end
+            expect(described_class.nintendo).to contain_exactly(
+                wii,
+                switch
+            )
+        end
+    end
 end
