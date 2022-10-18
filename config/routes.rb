@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'status', to: "status#index"
   get 'consoles', to: "consoles#index"
   get 'home', to: "home#index"
+  get 'aboutgame', to: "about_game#index"
 
   get "about-us", to: "about#index", as: :about
   get "terms", to: "terms#index"
