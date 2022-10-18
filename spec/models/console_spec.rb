@@ -21,11 +21,11 @@ RSpec.describe Console do
         end
     end
 
-    describe '#formatted_name' do
-        it 'returns the manufacturer and name in a string' do
-            expect(subject.formatted_name).to eql('Nintendo Wii')
-        end
-    end
+    # describe '#formatted_name' do
+    #     it 'returns the manufacturer and name in a string' do
+    #         expect(subject.formatted_name).to eql('Nintendo Wii')
+    #     end
+    # end
 
     # describe '.nintendo' do
     #     it 'returns an ActiveRecord::Relation of consoles manufactured by Nintendo' do
