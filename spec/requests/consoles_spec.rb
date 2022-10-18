@@ -2,17 +2,16 @@ require 'rails_helper'
 
 RSpec.describe 'Consoles requests' do
     before do
-        consoles = [
-            { name: 'NES', manufacturer: 'Nintendo' },
-            { name: 'SNES', manufacturer: 'Nintendo' },
-            { name: 'Wii', manufacturer: 'Nintendo' },
-            { name: 'Genesis', manufacturer: 'Sega' },
-            { name: 'Xbox', manufacturer: 'Microsoft' },
-            { name: 'Switch', manufacturer: 'Nintendo' },
-            { name: 'PS1', manufacturer: 'Sony' },
-            { name: 'PS2', manufacturer: 'Sony' },
-        ]
+        Console.create(name: 'NES', manufacturer: 'Nintendo')
+        Console.create(name: 'SNES', manufacturer: 'Nintendo')
+        Console.create(name: 'Wii', manufacturer: 'Nintendo')
+        Console.create(name: 'Genesis', manufacturer: 'Sega')
+        Console.create(name: 'Xbox', manufacturer: 'Microsoft')
+        Console.create(name: 'Switch', manufacturer: 'Nintendo')
+        Console.create(name: 'PS1', manufacturer: 'Sony')
+        Console.create(name: 'PS2', manufacturer: 'Sony')
     end
+    
     # describe 'GET /consoles' do
     #     # let(:json) { JSON.parse(response.body) }
     #     it 'returns an array of video games consoles' do

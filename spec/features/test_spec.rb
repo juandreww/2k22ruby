@@ -1,15 +1,15 @@
 require 'spec_helper'
 
-class Console
-    def initialize(name, manufacturer)
-        @name = name
-        @manufacturer = manufacturer
-    end
+# class Console
+#     def initialize(name, manufacturer)
+#         @name = name
+#         @manufacturer = manufacturer
+#     end
 
-    def formatted_name
-        "#{@manufacturer} #{@name}"
-    end
-end
+#     def formatted_name
+#         "#{@manufacturer} #{@name}"
+#     end
+# end
 
 # RSpec.describe Console do
 #     subject { described_class.new('Switch', 'Nintendo') }
