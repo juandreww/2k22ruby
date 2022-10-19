@@ -26,11 +26,6 @@ RSpec.describe 'Consoles requests' do
                 'Sony PS1',
                 'Sony PS2'
             )
-
-            # expect(response_json['consoles']).to include(
-            #     'NES',
-            #     'SNES',
-            # )
         end
 
         it 'supports specifying consoles for a specific manufacturer' do
