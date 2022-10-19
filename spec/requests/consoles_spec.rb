@@ -36,11 +36,6 @@ RSpec.describe 'Consoles requests' do
                 'Nintendo Wii',
                 'Nintendo Switch'
             )
-
-            # get('/consoles', params: { manufacturer: 'Sega' })
-            # expect(json['consoles']).to contain_exactly(
-            #     'Genesis'
-            # )
         end
     end
 end
