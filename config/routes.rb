@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get 'post/', to: "posts#show", as: :show
   get 'post/new', to: "posts#new"
   post 'post/new', to: "posts#create"
-  # resources :posts
 
   namespace :api do
     get('status' => 'status#index')
