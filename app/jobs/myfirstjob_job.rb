@@ -14,7 +14,10 @@ class OurWorker
     def perform(complexity)
         case complexity
         when "super_hard"
-            sleep 20
+            puts "Charging a credit card..."
+            raise "Woops stuff got bad"
+
+            # sleep 20
             puts "Really took quite a bit of effort"
         when "hard"
             sleep 10
