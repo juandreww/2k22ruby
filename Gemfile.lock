@@ -309,6 +309,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
+  redis
   rspec-rails (~> 5.0)
   selenium-webdriver
   sidekiq (~> 6.5)
