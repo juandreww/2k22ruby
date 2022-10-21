@@ -8,7 +8,7 @@ Sidekiq.configure_server do |config|
     config.redis = { db: 1 }
 end
 
-class OurWOrker
+class OurWorker
     include Sidekiq::Worker
 
     def perform(complexity)
