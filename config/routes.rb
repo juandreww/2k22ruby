@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Sidekiq::Web => "/sidekiq"
 
   get 'post', to: "posts#index"
   get 'post/', to: "posts#show", as: :show
