@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
+  require 'sidekiq/web'
+  mount Sidekiq::Web, at: '/sidekiq'
+
   get "welcome/index"
   post "welcome/trigger_job"
   get "other/job_done"
   root to: "welcome#index"
-  # mount Sidekiq::Web, at: "/sidekiq"
 
   get 'post', to: "posts#index"
   get 'post/', to: "posts#show", as: :show
