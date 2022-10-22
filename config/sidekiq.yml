@@ -9,3 +9,6 @@ production:
 :queues:
   - default
   - mailers
+
+  - mysite_default
+  - mysite_mailers
