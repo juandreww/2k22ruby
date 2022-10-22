@@ -1,4 +1,4 @@
-<h1>Please hit the triger mail button!</h1>
+<h1>Message sent to</h1>
 
 <%= form_with model: @user, url: email_path do |form| %>
     <% if @user.errors.any? %>
@@ -10,13 +10,8 @@
     <% end %>
 
     <div class="mb-3">
-        <%= form.label :password %>
-        <%= form.password_field :password, class: "form-control", placeholder: "password" %>
-    </div>
-
-    <div class="mb-3">
-        <%= form.label :password_confirmation %>
-        <%= form.password_field :password_confirmation, class: "form-control", placeholder: "password" %>
+        <%= form.label :email %>
+        <%= form.password_field :email, class: "form-control", placeholder: "password" %>
     </div>
 <% end %>
 
