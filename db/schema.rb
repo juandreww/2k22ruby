@@ -21,23 +21,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_16_225754) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "employees", id: :uuid, default: nil, force: :cascade do |t|
-    t.string "name", limit: 50
-    t.string "username", limit: 50
-    t.string "password", limit: 50
-    t.boolean "isactive"
-  end
-
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "caption"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "pricing", id: { type: :string, limit: 38 }, force: :cascade do |t|
-    t.string "title", limit: 255, default: "Default"
-    t.decimal "price", precision: 19, scale: 4, default: "0.0"
   end
 
   create_table "tweets", force: :cascade do |t|
@@ -71,8 +59,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_16_225754) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "fails", limit: 2, default: 0
-    t.datetime "failsuntil", precision: nil
   end
 
   add_foreign_key "tweets", "twitter_accounts"
