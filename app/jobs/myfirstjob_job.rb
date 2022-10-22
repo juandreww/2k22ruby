@@ -15,16 +15,20 @@ class OurWorker
     def perform(complexity)
         case complexity
         when "super_hard"
-            puts "Charging a credit card..."
-            raise "Woops stuff got bad #{Time.now().strftime('%F - %H:%M:%S.%L')}"
+            # puts "Charging a credit card..."
+            # raise "Woops stuff got bad #{Time.now().strftime('%F - %H:%M:%S.%L')}"
 
             # sleep 20
+            sleep 30
             puts "Really took quite a bit of effort #{Time.now().strftime('%F - %H:%M:%S.%L')}"
         when "hard"
             sleep 10
             puts "That was a bit of work"
         else
-            sleep 1
+            while true do
+                sleep 1
+                puts "Zombie bug"
+            end
             puts "That wasn't a lot of effort"
         end
     end
