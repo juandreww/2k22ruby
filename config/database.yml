@@ -23,8 +23,10 @@ default: &default
 
 development:
   <<: *default
-  database: helloapp_development
-  # database: cube0 -- for postgres local
+  # database: helloapp_development
+  
+  # for postgres local
+  database: cube0 
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
