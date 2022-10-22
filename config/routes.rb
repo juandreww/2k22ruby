@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   get "other/job_done"
   root to: "welcome#index"
 
-  get 'email', to: "welcome_emails#index"
-  post 'email', to: "welcome_emails#trigger_job"
+  get 'email', to: "users_mailer#index"
+  post 'email', to: "users_mailer#trigger_job"
 
   get 'post', to: "posts#index"
   get 'post/', to: "posts#show", as: :show
