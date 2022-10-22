@@ -1,7 +1,23 @@
 <h1>Please hit the triger mail button!</h1>
 
-<%= form_with url: email_path do |f| %>
-    <%= f.submit 'Trigger MailJob' %>
+<%= form_with model: @user, url: email_path do |form| %>
+    <% if @user.errors.any? %>
+        <div class="alert alert-danger">
+            <% @user.errors.full_messages.each do |message| %>
+                <div><%= message %></div>
+            <% end %>
+        </div>
+    <% end %>
+
+    <div class="mb-3">
+        <%= form.label :password %>
+        <%= form.password_field :password, class: "form-control", placeholder: "password" %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :password_confirmation %>
+        <%= form.password_field :password_confirmation, class: "form-control", placeholder: "password" %>
+    </div>
 <% end %>
 
 <div class = "spacer-10"></div>
