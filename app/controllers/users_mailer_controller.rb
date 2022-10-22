@@ -1,6 +1,6 @@
 class UsersMailerController < ApplicationController
     def index
-
+        
     end
 
     def trigger_job
