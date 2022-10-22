@@ -38,6 +38,8 @@ Rails.application.configure do
 
   # Queue Adapter
   config.active_job.queue_adapter = :sidekiq
+  config.active_job.queue_name_prefix = "mysite"
+  config.active_job.queue_name_delimiter = "_"
 
   # Don't care if the mailer can't send.
   config.action_mailer.perform_deliveries = true
