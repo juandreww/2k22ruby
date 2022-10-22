@@ -1,4 +1,4 @@
-class UsersMailer < ACtionMailer::Base
+class UsersMailer < ActionMailer::Base
     def welcome_email(user_id)
         @user = User.find(user_id)
 
