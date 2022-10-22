@@ -15,7 +15,7 @@ class OurWorker
         case complexity
         when "super_hard"
             puts "Charging a credit card..."
-            raise "Woops stuff got bad"
+            # raise "Woops stuff got bad"
 
             # sleep 20
             puts "Really took quite a bit of effort"
