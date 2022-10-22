@@ -1,4 +1,4 @@
-class WelcomeEmailsController < ApplicationController
+class UsersMailerController < ApplicationController
     def index
 
     end
