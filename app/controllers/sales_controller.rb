@@ -10,7 +10,7 @@ class SalesController < ApplicationController
 
     private
     def generate_report
-        sleep 30
+        sleep 60
     end
 
 end
