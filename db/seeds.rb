@@ -17,23 +17,22 @@ end
     fulfillment_center = %w[5bs yg1 mej xqf 4wj].sample
 
     PurchaseOrder.create    order_num: "#{Faker::Number.number(digits: 3)}-#{Faker::Number.number(digits: 8)}-#{Faker::Number.number(digits: 8)}",
-                          purchase_date: purchase_date,
-                          status: order_type,
-                          sales_channel: ['amazon.com', 'ebay.com', 'walmart.com', 'amazon.de'].sample,
-                          order_total: Faker::Commerce.price(range: 10..20.99),
-                          num_items_shipped: [0, 1].sample,
-                          num_items_unshipped: [0, 1].sample,
-                          payment_method: ['CC'],
-                          shipped_at: shipped_at,
-                          shipping_price: Faker::Commerce.price(range: 1.0..2.99),
-                          carrier: %w[fedex ups dhl usps].sample,
-                          tracking_number: Faker::Alphanumeric.alphanumeric(number: 10, min_alpha: 3, min_numeric: 3),
-                          estimated_arrival_date: estimated_arrival_date,
-                          fulfillment_center: fulfillment_center,
-                          confirmed_at: confirmed_at,
-                          ship_to_name: Faker::Name.name,
-                          ship_to_address: Faker::Address.full_address
-
+                            purchase_date: purchase_date,
+                            status: order_type,
+                            sales_channel: ['amazon.com', 'ebay.com', 'walmart.com', 'amazon.de'].sample,
+                            order_total: Faker::Commerce.price(range: 10..20.99),
+                            num_items_shipped: [0, 1].sample,
+                            num_items_unshipped: [0, 1].sample,
+                            payment_method: ['CC'],
+                            shipped_at: shipped_at,
+                            shipping_price: Faker::Commerce.price(range: 1.0..2.99),
+                            carrier: %w[fedex ups dhl usps].sample,
+                            tracking_number: Faker::Alphanumeric.alphanumeric(number: 10, min_alpha: 3, min_numeric: 3),
+                            estimated_arrival_date: estimated_arrival_date,
+                            fulfillment_center: fulfillment_center,
+                            confirmed_at: confirmed_at,
+                            ship_to_name: Faker::Name.name,
+                            ship_to_address: Faker::Address.full_address
 end
 
 PurchaseOrder.all.find_each do |purchase_order|
