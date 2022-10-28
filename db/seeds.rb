@@ -29,6 +29,25 @@ end
     shipping_price: Faker::Commerce.price(range: 1.0..2.99)
     carrier: %w[fedex ups dhl usps].sample,
     tracking_number: Faker::Alphanumeric.alphanumeric(number: 10, min_alpha:3, min_numeric: 1),
-    
+    estimated_arrival_date: estimated_arrival_date,
+    fulfillment_center: fulfillmenter_center,
+    confirmed_at: confirmed_at,
+    ship_to_name: Faker::Name.name,
+    ship_to_address: Faker::Address.full_address
 
+end
+
+PurchaseORder.all.find_each do |purchase_order|
+    item = Item.all.sample
+    quantity = purchase_order.num_items_shipped + purchase_order.num_items_unshipped
+
+    purchase_order.order_items.create!(
+        item: Item.all.sample,
+        currency: %w[usd eur].sample,
+        quantity_ordered: quantity,
+        quantity_shipped: purchase_order.num_items_shipped,
+        price: item.price * quantity,
+        tax: item.price * quantity * 0.07
+        platform_fee: Faker::Commerce.price(range: 0.12..0.99)
+    )
 end
