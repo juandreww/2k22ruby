@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
+  root 'purchase_order#index'
+
   resources :items
   resources :order_items
   resources :purchase_orders
 
-  require 'sidekiq/web'
-  mount Sidekiq::Web, at: '/sidekiq'
+  # require 'sidekiq/web'
+  # mount Sidekiq::Web, at: '/sidekiq'
 
-  get "welcome/index"
-  post "welcome/trigger_job"
-  get "other/job_done"
-  root to: "welcome#index"
+  # get "welcome/index"
+  # post "welcome/trigger_job"
+  # get "other/job_done"
+  # root to: "welcome#index"
 
   get 'email', to: "users_mailer#index"
   post 'email', to: "users_mailer#trigger_job"
