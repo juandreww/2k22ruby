@@ -1,5 +1,5 @@
 class PurchaseOrderDenormalizer
-    attr_reader purchase_order
+    attr_reader :purchase_order
 
     def initialize(purchase_order)
         @purchase_order = purchase_order
@@ -158,17 +158,17 @@ class PurchaseOrderDenormalizer
         purchase_order.order_items.each do |order_item|
         fulfillment_fee = order_item.item.fulfillment_fee.to_f.abs * order_item.quantity_ordered
         info = {
-        fulfillment_fee: fulfillment_fee,
-        item_id: order_item.item_id,
-        quantity_ordered: order_item.quantity_ordered,
-        quantity_shipped: order_item.quantity_shipped,
-        price: order_item.price,
-        discount: order_item.discount,
-        tax: order_item.tax,
-        platform_fee: order_item.platform_fee,
-        item_title: order_item.item.title,
-        item_sku: order_item.item.sku,
-        item_nickname: order_item.item.nickname
+            fulfillment_fee: fulfillment_fee,
+            item_id: order_item.item_id,
+            quantity_ordered: order_item.quantity_ordered,
+            quantity_shipped: order_item.quantity_shipped,
+            price: order_item.price,
+            discount: order_item.discount,
+            tax: order_item.tax,
+            platform_fee: order_item.platform_fee,
+            item_title: order_item.item.title,
+            item_sku: order_item.item.sku,
+            item_nickname: order_item.item.nickname
         }
 
         items_info << info
