@@ -28,7 +28,7 @@ end
     shipped_at: shipped_at,
     shipping_price: Faker::Commerce.price(range: 1.0..2.99)
     carrier: %w[fedex ups dhl usps].sample,
-    tracking_number: Faker::Alphanumeric.alphanumeric(number: 10, min_alpha:3, min_numeric: 1),
+    tracking_number: Faker::Alphanumeric.alphanumeric(number: 10, min_alpha:3, min_numeric: 3),
     estimated_arrival_date: estimated_arrival_date,
     fulfillment_center: fulfillmenter_center,
     confirmed_at: confirmed_at,
