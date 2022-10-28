@@ -9,8 +9,8 @@ class Elasticsearch::OrderStat
     
     def self.repository
         @repository ||= Elasticsearch::EsRepository.new(client: Elasticsearch::Model.client,
-            index_name: 'products_stats',
-            type: :product_stats,
-            klass: Elasticsearch::ProductStat)
+            index_name: 'order_stats',
+            type: :order_stats,
+            klass: Elasticsearch::OrderStat)
     end
 end
