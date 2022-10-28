@@ -36,7 +36,7 @@ end
 
 end
 
-PurchaseORder.all.find_each do |purchase_order|
+PurchaseOrder.all.find_each do |purchase_order|
     item = Item.all.sample
     quantity = purchase_order.num_items_shipped + purchase_order.num_items_unshipped
 
@@ -48,5 +48,5 @@ PurchaseORder.all.find_each do |purchase_order|
         price: item.price * quantity,
         tax: item.price * quantity * 0.07,
         platform_fee: Faker::Commerce.price(range: 0.12..0.99)
-    )
+      )
 end

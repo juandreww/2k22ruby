@@ -23,7 +23,6 @@ class CreatePurchaseOrders < ActiveRecord::Migration[7.0]
       t.datetime :refunded_at
       t.string :ship_to_name
       t.string :ship_to_address
-
       t.timestamps
     end
   end
