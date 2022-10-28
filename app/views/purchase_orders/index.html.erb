@@ -3,12 +3,32 @@
 <h1>Purchase orders</h1>
 
 <div id="purchase_orders">
-  <% @purchase_orders.each do |purchase_order| %>
-    <%= render purchase_order %>
-    <p>
-      <%= link_to "Show this purchase order", purchase_order %>
-    </p>
-  <% end %>
+  <table>
+    <thead>
+      <th>Order_num</th>
+      <th colspan="1"></th>
+    </thead>
+    
+    <tbody>
+      <% @purchase_orders.each do |purchase_order| %>
+        <tr>
+          <td><%= purchase_order.id %></td>
+          <td><%= purchase_order.order_num %></td>
+          <td><%= purchase_order.purchase_date %></td>
+          <td><%= purchase_order.sales_channel %></td>
+          <td><%= purchase_order.order_total %></td>
+          <td><%= purchase_order.created_at %></td>
+          <td><%= purchase_order.num_items_shipped %></td>
+          <td><%= link_to "Show this purchase order", purchase_order %></td>
+        </tr>
+        <%#= render purchase_order %>
+        <%#=<p>
+          
+        </p>%>
+      <% end %>
+    </tbody>
+    
+  </table>
 </div>
 
 <%= link_to "New purchase order", new_purchase_order_path %>
