@@ -5,13 +5,13 @@ class CreatePurchaseOrders < ActiveRecord::Migration[7.0]
       t.datetime :purchase_date
       t.string :status
       t.string :sales_channel
-      t.decimal :order_total
-      t.integer :num_items_shipped
-      t.integer :num_items_unshipped
+      t.decimal :order_total, precision: 8, scale: 2, default: "0.0"
+      t.integer :num_items_shipped, default: 0
+      t.integer :num_items_unshipped, default: 0
       t.string :payment_method
       t.datetime :shipped_at
-      t.float :shipping_price
-      t.float :shipping_tax
+      t.float :shipping_price, precision: 8, scale: 2, default: "0.0"
+      t.float :shipping_tax, precision: 8, scale: 2, default: "0.0"
       t.string :carrier
       t.string :tracking_number
       t.datetime :estimated_arrival_date
