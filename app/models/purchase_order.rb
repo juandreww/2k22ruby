@@ -15,14 +15,18 @@ class PurchaseOrder < ApplicationRecord
             indexes :payment_method, type: :keyword
             indexes :shipped_at, type: :date, format: :date_optional_time
             indexes :shipping_price, type: :half_float
-            indexes :id, type: :integer
-            indexes :id, type: :integer
-            indexes :id, type: :integer
-            indexes :id, type: :integer
-            indexes :id, type: :integer
-            indexes :id, type: :integer
-            indexes :id, type: :integer
-        
+            indexes :shipping_tax, type: :half_float
+            indexes :carrier, type: :keyword
+            indexes :tracking_number
+            indexes :estimated_arrival_date, type: :date, format: :date_optional_time
+            indexes :fulfillment_center, type: :keyword
+            indexes :confirmed_at, type: :date, format: :date_optional_time
+            indexes :returned_date, type: :date, format: :date_optional_time
+            indexes :return_reason
+            indexes :notes
+            indexes :refunded_at, type: :date, format: :date_optional_time
+            indexes :ship_to_name
+            indexes :ship_to_address
         end
     end
 end
