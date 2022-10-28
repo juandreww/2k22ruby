@@ -27,6 +27,14 @@ class PurchaseOrder < ApplicationRecord
             indexes :refunded_at, type: :date, format: :date_optional_time
             indexes :ship_to_name
             indexes :ship_to_address
+
+            indexes :skus
+            indexes :item_ids, type: :long
+
+            indexes :unique_products, type: :integer
+            indexes :quantity_ordered, type: :integer
+            indexes :quantity_shipped, type: :integer
+            indexes :quantity_unshipped, type: :integer
         end
     end
 end
