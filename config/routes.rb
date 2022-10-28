@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :order_items
+  resources :purchase_orders
 
   require 'sidekiq/web'
   mount Sidekiq::Web, at: '/sidekiq'
