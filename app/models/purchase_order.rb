@@ -39,6 +39,23 @@ class PurchaseOrder < ApplicationRecord
             indexes :quantity_ordered, type: :integer
             indexes :quantity_shipped, type: :integer
             indexes :quantity_unshipped, type: :integer
+
+            indexes :currency, type: :keyword
+
+            indexes :order_items_info, type: :nested do
+                indexes :item_id, type: :integer
+                indexes :quantity_ordered, type: :integer
+                indexes :quantity_shipped, type: :integer
+                indexes :price, type: :half_float
+                indexes :discount, type: :half_float
+                indexes :tax, type: :half_float
+                indexes :platform_fee, type: :half_float
+
+                # extras
+                indexes :item_title
+                indexes :item_sku
+                indexes :item_nickname
+            end
         end
     end
 end
