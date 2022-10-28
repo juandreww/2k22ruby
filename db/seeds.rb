@@ -39,14 +39,14 @@ end
 PurchaseOrder.all.find_each do |purchase_order|
     item = Item.all.sample
     quantity = purchase_order.num_items_shipped + purchase_order.num_items_unshipped
-
+  
     purchase_order.order_items.create!(
-        item: Item.all.sample,
-        currency: %w[usd eur].sample,
-        quantity_ordered: quantity,
-        quantity_shipped: purchase_order.num_items_shipped,
-        price: item.price * quantity,
-        tax: item.price * quantity * 0.07,
-        platform_fee: Faker::Commerce.price(range: 0.12..0.99)
-      )
-end
+      item: Item.all.sample,
+      currency: %w[usd eur].sample,
+      quantity_ordered: quantity,
+      quantity_shipped: purchase_order.num_items_shipped,
+      price: item.price * quantity,
+      tax: item.price * quantity * 0.07,
+      platform_fee: Faker::Commerce.price(range: 0.12..0.99)
+    )
+  end
