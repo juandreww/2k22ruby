@@ -8,6 +8,8 @@ class PurchaseOrder < ApplicationRecord
         PurchaseOrderDenormalizer.new(self).to_hash
     end
 
+    index_name: 'purchase_orders_2022'
+
     settings index: { number_of_shards: 1 } do
         mapping dynamic: 'false' do
             indexes :id, type: :integer
@@ -31,6 +33,8 @@ class PurchaseOrder < ApplicationRecord
             indexes :refunded_at, type: :date, format: :date_optional_time
             indexes :ship_to_name
             indexes :ship_to_address
+            indexes :ship_to_country, type: :keyword
+            indexes :region_taxes, type: :float
 
             indexes :skus
             indexes :item_ids, type: :long
