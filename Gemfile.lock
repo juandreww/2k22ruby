@@ -351,7 +351,7 @@ DEPENDENCIES
   elasticsearch-model (~> 7.2)
   elasticsearch-persistence (~> 7.2)
   elasticsearch-rails (~> 7.2)
-  faker
+  faker (~> 2.23)
   importmap-rails
   jbuilder
   omniauth-rails_csrf_protection (~> 1.0)
