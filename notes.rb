@@ -9,7 +9,6 @@ end
 
 purchase_stat
 
-
 Article.__elasticsearch__.client.indices.put_mapping |
     index: Article.index_name,
     type: Article.document_type,
