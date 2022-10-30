@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   resources :order_items
   resources :purchase_orders
 
-  # require 'sidekiq/web'
-  # mount Sidekiq::Web, at: '/sidekiq'
+  require 'sidekiq/web'
+  mount Sidekiq::Web, at: '/sidekiq'
 
   # get "welcome/index"
   # post "welcome/trigger_job"
