@@ -89,3 +89,4 @@ gem "elasticsearch-persistence", "~> 7.2"
 
 gem "faker", "~> 2.23"
 gem "delivery_boy"
+gem "racecar"
