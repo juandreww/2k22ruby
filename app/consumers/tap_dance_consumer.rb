@@ -9,9 +9,10 @@ class TapDanceConsumer < Racecar::Consumer
 
   def process(message)
     pageview = JSON.parse(message.value)
-    ip_address = pageview.fetch("ip_address")
+    ip_address = pageview.fetch("name")
 
     country = "Indonesia"
+    produce(JSON.dump(pageview), topic: "pageviews-with-country", key: pageview["id"])
 
     puts "Received message: #{message.value}"
   end
@@ -31,6 +32,5 @@ class TapDanceConsumer < Racecar::Consumer
   #     # messages.each do |message|
   #       file << messages.value
   #     # end
-  #   end
   # end
 end
