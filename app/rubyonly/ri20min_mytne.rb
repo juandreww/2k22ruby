@@ -8,10 +8,13 @@ class MegaGreeter
     def say_traffic
         if @title.nil?
             return puts "There is a power outage in this city"
-        
-        end
-
-        puts "Hi bro. its #{@title.capitalize} lamp now"
+        elsif @title.respond_to?("each")
+            @title.each do |boo|
+                puts "There is a car #{boo} in a parking lot."
+            end
+        else
+            puts "Hi bro. its #{@title.capitalize} lamp now"
+        end        
     end
 
     def say_car
@@ -40,6 +43,8 @@ if __FILE__ == $0
     mg.say_car
 
     mg.title = ["Green", "Yellow", "Red"]
+    mg.say_traffic
+
 
     mg.title = nil
     mg.say_traffic
