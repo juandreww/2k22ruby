@@ -7,10 +7,10 @@ class MegaGreeter
 
     def say_traffic
         if @title.nil?
-            return puts "There is a power outage in this city"
+            puts "There is a power outage in this city"
         elsif @title.respond_to?("each")
             @title.each do |boo|
-                puts "There is a car #{boo} in a parking lot."
+                puts "The current traffic status is #{boo} lamp right now."
             end
         else
             puts "Hi bro. its #{@title.capitalize} lamp now"
@@ -19,12 +19,18 @@ class MegaGreeter
 
     def say_car
         if @title.nil?
-            return puts "I didn't see any car crossing the road"
-        elsif @title.downcase == "red"
-            @title = "honda"
+            puts "I didn't see any car crossing the road"
+        elsif @title.respond_to?("join")
+            puts "There are groups of cars of #{@title.join(", ")}. What an spectacular view!"
+        else
+            if @title.downcase == "red"
+                @title = "honda"
+            end
+            
+            puts "911! 911! I saw a #{@title.capitalize} driving at a very high speed"
         end
 
-        puts "911! 911! I saw a #{@title.capitalize} driving at a very high speed"
+        
     end
 end
 
