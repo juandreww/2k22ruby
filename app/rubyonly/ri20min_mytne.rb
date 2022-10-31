@@ -21,12 +21,12 @@ class MegaGreeter
         if @title.nil?
             puts "I didn't see any car crossing the road"
         elsif @title.respond_to?("join")
-            puts "There are groups of cars of #{@title.join(", ")}. What an spectacular view!"
+            puts "There are groups of cars of #{@title.join(", ")}. What a spectacular view!"
         else
             if @title.downcase == "red"
                 @title = "honda"
             end
-            
+
             puts "911! 911! I saw a #{@title.capitalize} driving at a very high speed"
         end
 
@@ -51,6 +51,8 @@ if __FILE__ == $0
     mg.title = ["Green", "Yellow", "Red"]
     mg.say_traffic
 
+    mg.title = ["Lamborghini", "Civic", "HR-V", "Veloz"]
+    mg.say_car
 
     mg.title = nil
     mg.say_traffic
