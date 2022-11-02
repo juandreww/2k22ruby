@@ -14,4 +14,4 @@ puts "In dev we have a UI/UX, QA Engineer, DevOps, Backend, Frontend, and Fullst
 puts 2**4 + 4
 puts 2*3 < 4
 
-puts "There are 3 Backend, and 1 UI/UX, 2 Frontend, "
+puts "There are 3 Backend, and 1 UI/UX, 2 Frontend"
