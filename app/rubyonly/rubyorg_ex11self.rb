@@ -7,7 +7,7 @@ print "And what is the flower that's checkered pink colored and bell-shaped like
 second_flower = gets.chomp
 #Frittalaria
 
-print "And what is the lavender like, reliable yet has an incredible fragrance ? "
+print "And what is the lavender like, reliable yet has an incredible fragrance? "
 third_flower = gets.chomp
 #Hyacinth
 
