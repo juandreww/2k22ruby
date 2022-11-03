@@ -25,8 +25,17 @@ Runchise menggunakan beberapa apps untuk integrasi:
 \t- Accurate
 \t- Jurnal
 """
+apps_runchise_2 ='''
+#{table_note}
+Runchise menggunakan beberapa apps untuk integrasi:
+\t- GrabFood
+\t- LalaMove
+\t- Accurate
+\t- Jurnal
+'''
 
 puts table_note
 puts restaurant_floor
 puts files_d
 puts apps_runchise
+puts apps_runchise_2
