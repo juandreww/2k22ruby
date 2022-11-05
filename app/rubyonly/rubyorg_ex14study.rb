@@ -27,4 +27,5 @@ puts "Gems counted are #{defined?(count_gems) == 'local_variable' ? count_gems :
 puts "#{user_name} #{defined?(drink_coffee) == 'local_variable' ? (drink_coffee.downcase == 'yes' ? 'would' : 'would not') : 'would not'} like to drink coffee."
 if defined? yes_or_no_again == 'local_variable'
     puts "Wait a moment. I'm giving you a Zork and Adventure game."
+    puts "Adios #{ARGV[1]}"
 end
