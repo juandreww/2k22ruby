@@ -23,5 +23,6 @@ else
     yes_or_no_again = STDIN.gets.chomp
 end
 
+puts "#{defined?(count_gems)}"
 puts "Gems counted are #{defined?(count_gems) ? count_gems : 0} gems."
-puts "#{user_name} #{defined?(drink_coffee) && drink_coffee.downcase == 'yes' ? 'would' : 'would not'} like to drink coffee."
+puts "#{user_name} #{defined?(drink_coffee) ? (drink_coffee.downcase == 'yes' ? 'would' : 'would not') : 'would not'} like to drink coffee."
