@@ -23,6 +23,5 @@ else
     yes_or_no_again = STDIN.gets.chomp
 end
 
-puts "#{defined?(count_gems)}"
-puts "Gems counted are #{defined?(count_gems) ? count_gems : 0} gems."
-puts "#{user_name} #{defined?(drink_coffee) ? (drink_coffee.downcase == 'yes' ? 'would' : 'would not') : 'would not'} like to drink coffee."
+puts "Gems counted are #{defined?(count_gems) == 'local_variable' ? count_gems : 0} gems."
+puts "#{user_name} #{defined?(drink_coffee) == 'local_variable' ? (drink_coffee.downcase == 'yes' ? 'would' : 'would not') : 'would not'} like to drink coffee."
