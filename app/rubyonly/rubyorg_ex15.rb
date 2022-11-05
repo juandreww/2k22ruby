@@ -10,9 +10,10 @@ txt = open(filename)
 # open(filename) berarti membuka file dari path filename dan menyimpan seluruh isi teks nya ke variable txt
 # open(filename) berarti membuka file dari directory_path filename dan menyimpan seluruh isi teks-nya ke variable txt
 # open(filename) berarti membuka file dari directory_path filename dan menyimpan seluruh isi teks-nya ke variable txt
-
 puts "Here's your file #{filename}:"
 puts txt.read
+puts ""
+puts txt.inspect
 puts ""
 
 print "Type the filename again: "
