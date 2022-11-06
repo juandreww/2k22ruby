@@ -15,6 +15,9 @@ puts txt.read
 puts "\nInspected variable:"
 puts txt.inspect
 puts ""
+txt.close
+puts txt.inspect
+puts ""
 
 # print "Type the filename again: "
 # file_again = STDIN.gets.chomp
