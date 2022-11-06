@@ -1,34 +1,36 @@
-file_path = ARGV[0]
-user_name = ARGV[1]
-prompt = '> '
+argv_first = ARGV[0]
+argv_second = ARGV[1]
+prompt = '< '
 
-puts "Hi again, #{user_name}"
-puts "We are going to erase content of file at #{file_path}"
-puts "You may type CTRL-C to cancel erasing."
-puts "Or if you wish to proceed, hit RETURN."
+puts "Your file is in directory: #{argv_first}"
+puts "  Glad to have you on board, #{argv_second}!"
+puts "      Please proceed to emptying the file by hitting RETURN:"
 
-STDIN.gets.chomp
+STDIN.gets
 
-puts "Opening the file..."
-file = open(file_path, 'w')
+sleep(0.1)
+puts "."
+sleep(0.1)
+puts "."
+sleep(0.1)
+puts "."
+sleep(0.1)
+puts "."
+sleep(0.1)
+puts "."
 
-puts "Truncating the file. Goodbye!"
+file = open(argv_first, 'w')
 file.truncate(0)
+text_combined = ""
 
-puts "type line_1"
-print prompt
-line_1 = STDIN.gets.chomp
-puts "type line_2"
-print prompt
-line_2 = STDIN.gets.chomp
-puts "type line_3"
-print prompt
-line_3 = STDIN.gets.chomp
+for i in 1..3
+    puts "Write out your line_" + i.to_s
+    print prompt
+    line_input = STDIN.gets.chomp
+    text_combined = text_combined + line_input + "\n"
+end
 
-text_combined = line_1 + "\n" + line_2 + "\n" + line_3 + "\n"
 file.write(text_combined)
-
+puts "The new text files are:"
 puts text_combined
-puts "-------------------------"
-puts "Closing file, saving updates."
-puts file.close
+file.close
