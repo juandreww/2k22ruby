@@ -17,7 +17,12 @@ to_file_length = to_file_read.length
 puts "The to_file now has #{to_file_length} bytes of characters."
 puts "Begin copying..."
 for i in 1..5
+    puts "."
     sleep(0.1)
 end
 
+to_file.write(from_file_read)
+puts "Data copied successfully"
 
+to_file.close
+from_file.close
