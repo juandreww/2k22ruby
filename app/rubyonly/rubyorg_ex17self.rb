@@ -10,4 +10,14 @@ puts "Click RETURN if you wish to proceed, or CTRL-C if not"
 
 STDIN.gets
 
+to_file = open(to_filepath, 'w+')
+to_file_read = to_file.read
+to_file_length = to_file_read.length
+
+puts "The to_file now has #{to_file_length} bytes of characters."
+puts "Begin copying..."
+for i in 1..5
+    sleep(0.1)
+end
+
 

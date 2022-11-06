@@ -8,16 +8,7 @@ puts "      Please proceed to emptying the file by hitting RETURN:"
 
 STDIN.gets
 
-sleep(0.1)
-puts "."
-sleep(0.1)
-puts "."
-sleep(0.1)
-puts "."
-sleep(0.1)
-puts "."
-sleep(0.1)
-puts "."
+
 
 file = open(argv_first, 'w')
 file.truncate(0)
