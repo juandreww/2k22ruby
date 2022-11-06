@@ -10,8 +10,8 @@ def rewind(file)
   file.seek(0)
 end
 
-def print_a_line(line_count)
-  puts "#{line_count}, This is line #{line_count}"
+def print_a_line(line_count, file)
+  puts "#{line_count}, Content: #{file.gets}"
 end
 
 current_file = File.open(input_file)
@@ -27,10 +27,10 @@ rewind(current_file)
 puts "------------------------\nFunction 003..005\n------------------------"
 puts "Let's print three lines:"
 current_line = 1
-print_a_line(current_line)
+print_a_line(current_line, current_file)
 
 current_line += 1
-print_a_line(current_line)
+print_a_line(current_line, current_file)
 
 current_line += 1
-print_a_line(current_line)
+print_a_line(current_line, current_file)
