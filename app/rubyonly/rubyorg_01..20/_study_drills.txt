@@ -1,0 +1,137 @@
+
+Ruby.
+1. mid 1990s by Yukihiro Matsumoto
+2. garbage collection and just-in-time compilation.
+
+ruby 20mins
+1. irb : interactive ruby
+2. bult-in module adalah menggabungkan beberapa method ke dalam 1 grup module
+3. Greeter.instance_methods digunakan untuk munculkan semua instance
+4. instance variable berarti non static, kalo class variabel itu static
+
+ruby org ex1
+1. octothorpe is also called pound, hash, mesh
+octothorpe is a hash #
+octothorpe is a hash #
+octothorpe is a hash #
+octothorpe is a hash #
+octothorpe is a hash #
+octothorpe is a hash #
+octothorpe is a hash #
+octothorpe is a hash #
+octothorpe is a hash #
+octothorpe is a hash #
+
+ruby org ex3
+1. >= greater than equal
+2. <= less than equal
+3. < less than
+4. > greater than
+5. % percent
+6. * asterisk
+7. / slash
+8. - minus
+9. + plus
+
+#{codes} is a way to do ruby computational in a string
+#{codes} is a way to do ruby computational in a string
+#{codes} is a way to do ruby computational in a string
+#{codes} is a way to do ruby computational in a string
+#{codes} can help you to do calculation within a string
+#{codes} can help you do a calculation inside a string
+#{codes} can help you do a calculation inside a string
+#{codes} can help you do a calculation inside a string
+
+PEMDAS adalah parentheses, exponents, multiplication, division, addition, substraction
+PEMDAS adalah parentheses, exponents, multiplication, division, addition, substraction
+PEMDAS adalah parentheses, exponents, multiplication, division, addition, substraction
+PEMDAS adalah parentheses, exponents, multiplication, division, addition, substraction
+PEMDAS adalah parentheses, exponents, multiplication, division, addition, substraction
+
+ruby org ex4
+1. assign variable by typing:
+carpool = 2
+total_hours = 24
+carpool_space_available
+
+use sprintf('%.2f', variable_name) to have variable_name rounded by two decimals.
+use sprintf('%.2f', variable_name) to have variable_name rounded by two decimals.
+use sprintf('%.2f', variable_name) to have variable_name rounded by two decimals.
+use sprintf('%.2f', variable_name) to have variable_name rounded by two decimals.
+use sprintf('%.2f', variable_name) to have variable_name rounded by two decimals.
+
+formatter memiliki arti mencetak ke output terminal sesuai statement nya , seperti prepared statement
+formatter artinya mencetak ke output terminal, persis seperti prepared statement.
+formatter artinya mencetak ke output terminal, persis seperti prepared statement.
+formatter artinya mencetak ke output terminal, persis seperti prepared statement.
+
+----
+1. gets.chomp digunakan untuk terminal menerima input dari user
+2. gets.chomp digunakan untuk terminal wajib menerima input dari user
+3. gets.chomp digunakan untuk terminal agar wajib menerima input dari user
+4. gets.chomp digunakan untuk terminal agar wajib menerima input dari user
+5. gets.chomp digunakan untuk terminal agar wajib menerima input dari user
+6. gets.chomp digunakan untuk terminal agar wajib menerima input dari user
+7. gets.chomp digunakan untuk terminal agar wajib menerima input dari user
+8. gets.chomp digunakan agar terminal wajib menerima input dari user
+9. gets.chomp digunakan agar terminal wajib menerima input dari user
+10. gets.chomp digunakan agar terminal wajib menerima input dari user
+11. gets.chomp digunakan agar terminal wajib menerima input dari user
+12. gets.chomp digunakan agar terminal wajib menerima input dari user
+
+ruby.org ex11
+1. gets.chomp digunakan agar user bisa mengirimkan input via terminal
+2. gets.chomp digunakan agar user bisa mengirimkan input via terminal
+3. gets.chomp digunakan agar user bisa mengirimkan input via terminal
+4. gets.chomp digunakan agar user bisa mengirimkan input via terminal
+5. gets.chomp digunakan agar user bisa mengirimkan input via terminal
+6. gets.chomp digunakan agar user bisa mengirimkan input via terminal
+7. gets.chomp digunakan agar user bisa mengirimkan input via terminal
+8. gets.chomp digunakan agar user bisa mengirimkan input via terminal
+
+
+ruby.org ex13
+1. ARGV artinya menjalankan ruby dengan kewajiban meng-assign nilai variabel2 dari CLI
+2. ARGV artinya menjalankan ruby dengan kewajiban meng-assing value masing2 variabel melalui CLI
+3. ARGV artinya menjalankan ruby dengan kewajiban meng-assign value masing2 variabel melalui CLI
+4. ARGV artinya menjalankan ruby dengan kewajiban meng-assign value masing2 variabel melalui CLI
+5. ARGV artinya menjalankan ruby dengan kewajiban meng-assign value masing2 variabel melalui CLI
+6. ARGV artinya menjalankan ruby dengan kewajiban meng-assign value masing2 variabel melalui CLI
+7. ARGV artinya menajalankn ruby script dengan karhusan meng assign value ke masing masing variabel melalui CLI
+8. ARGV artinya menjalankan ruby script dengan kewajiban mengassign value ke masing masing variabyy
+
+
+txt = File.open("app/rubyonly/rubyorg_ex15self_sample.txt")
+
+ruby.org ex 16
+1. open(file_name, 'w') memiliki arti membuka file tersebut dan memperbolehkan akses untuk mengubah isi file
+2. open(file_name, 'w') memiliki arti membuka file dan memberikan hak akses untuk update isi file tersebut.
+3. open(file_name, 'w') memiliki arti membuka file dan memberikan hak akses untuk update isi file tersebut.
+4. open(file_name, 'w') memiliki arti membuka file dan memberikan hak akses untuk update isi file tersebut.
+5. open(file_name, 'w') memiliki arti membuka file dan memberikan hak akses untuk update isi file tersebut.
+
+
+ruby.org ex 17
+1. echo "This is a test file." > app/rubyonly/test.txt akan membuat suatu file baru bernama test.txt dengan konten "This is a test file"
+2. echo "content_here" > file_directory/app_name.txt akan membuat suatu file baru bernama app_name.txt dengan konten "content_here"
+3. echo "content_here" > file_directory/filename.txt akan membuat suatu file baru bernama fiilename.txt dengan konten "content_here"
+4. echo "content_here" > file_directory/filename.txt akan membuat suatu file baru bernama filename.txt dengan konten "content_here"
+5. echo "content_here" > file_directory/filename.txt akan membuat suatu file baru bernama filename.txt dengan konten "content_here" 
+6. echo "content_here" > file_directory/filename.txt akan membuat suatu file baru bernama filename.txt dengan konten "content_here"
+7. echo "content_here" > file_directory/filename.txt akan membuat suatu file baru bernama filename.txt dengan konten "content_here"
+8. cat file_directory akan membaca isi konten / script pada file_directory
+9. cat file_directory akan membaca isi konten / script pada file_directory
+10. cat file_directory akan membaca isi konten / script pada file_directory
+
+
+ruby.org ex18
+1. apabila tidak ada argument maka function tidak perlu parentheses
+2. apabila tidak ada argument maka function tidak perlu parentheses
+3. apabila tidaka da argument maka function tidak perlu parentheses
+4. apabila tidak ada argument maka function tidak perlu parentheses
+5. apabiila tidak ada argument maka function tidak perlu parentheses
+6. apabila defining function pakai 3 args, maka saat codes juga harus pakai 3 args, tidak boleh lebih atau kurang nanti bermasalah
+7. apabila defining function pakai 3 args, maka saat codes juga harus pakai 3 args, tidak boleh lebih atau kurang nanti bermasalah
+8. apabila defining function pakai 3 args, maka saat codes juga harus pakai 3 args, tidak boleh lebih atau kurang nanti bermasalah
+9. apabila defining function pakai 3 args, maka saat codes juga harus pakai 3 args, tidak boleh lebih atau kurang nanti bermasalah
+10. apabila defining function pakai 3 args, maka saat codes juga harus pakai 3 args, tidak boleh lebih atau kurang nanti bermasalah
