@@ -17,7 +17,12 @@ def peanuts_bread_four(*args)
   puts "I prepared a Peanut Bread, along with #{arg1}, #{arg2}, and #{arg3}"
 end
 
+def peanutbread?
+  puts 'true'
+end
+
 peanuts_bread_one
 peanuts_bread_two('Milk')
 peanuts_bread_three('Milk', 'Egg')
 peanuts_bread_four('milk', 'egg', 'juice', 'pizza')
+peanutbread?
