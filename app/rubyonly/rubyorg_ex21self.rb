@@ -20,7 +20,7 @@ def multiply_by_rim(num)
   num * 500
 end
 
-num = 4
+num = 45
 puts "Sarah bought a notebook #{num} dozen. It is equal to: "
 puts "#{multiply_by_dozen(num)} pieces."
 puts
