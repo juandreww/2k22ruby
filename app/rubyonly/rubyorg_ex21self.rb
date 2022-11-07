@@ -39,4 +39,3 @@ num = 2
 puts "We have #{num} rim of papers. It is equal to:"
 puts "#{multiply_by_rim(num)} pieces."
 puts
-puts "rubocop in the house"

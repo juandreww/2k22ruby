@@ -10,7 +10,6 @@ def subtract(val1, val2)
   val1 - val2
 end
 
-
 def multiply(val1, val2)
   puts "MULTIPLYING #{val1} * #{val2}"
   val1 * val2
@@ -35,4 +34,4 @@ puts 'Here is a puzzle.'
 
 what = add(age, subtract(height, multiply(weight, divide(iq, 2))))
 puts "That becomes: #{what}. Can you do it by hand?"
-puts "nakal"
+puts 'nakal'
