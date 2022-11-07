@@ -38,4 +38,5 @@ puts
 num = 2
 puts "We have #{num} rim of papers. It is equal to:"
 puts "#{multiply_by_rim(num)} pieces."
+puts 'All hell break loose'
 puts
