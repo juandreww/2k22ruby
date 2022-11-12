@@ -25,7 +25,7 @@ puts "Sarah bought a notebook #{num} dozen. It is equal to: "
 puts "#{multiply_by_dozen(num)} pieces."
 puts
 
-num = 3
+num = 30
 puts "Jimmy went to Sate Kendal and ordered #{num} score of satay. It is equal to: "
 puts "#{multiply_by_score(num)} pieces."
 puts
